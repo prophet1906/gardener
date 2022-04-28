@@ -33,5 +33,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          external_repository: prophet1906/garden
           publish_dir: ./public
-          publish_branch: master  # deploying branch
+          publish_branch: main
