@@ -9,7 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Git checkout
+        uses: actions/checkout@v2
 
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.12
@@ -33,4 +34,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: hugo  # deploying branch
+          publish_branch: master  # deploying branch
