@@ -3,16 +3,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - hugo
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - name: Git checkout
+      - name: Checkout Main Branch
         uses: actions/checkout@v2
 
-      - name: Build Link Index
+      - name: Hugo Obsidian - Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.12
         with:
           index: true
@@ -23,16 +23,17 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.96.0'
+          hugo-version: "0.96.0"
           extended: true
 
       - name: Build
         run: hugo --minify
 
-      - name: Deploy
+      - name: Deploy Garden
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: prophet1906/garden
           publish_dir: ./public
           publish_branch: main
+          cname: prophet1906.github.io
