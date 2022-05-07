@@ -13,7 +13,7 @@ This note covers the workflow I use to contribute to open-source projects. I am 
 When starting your open source contribution journey, the first step is to find a project that interests you. Many sites index good issues for beginners. I am listing down a few sites which I felt comfortable using when getting started.
 - [Good First Issues](https://goodfirstissues.com/index.html)
 - [Up For Grabs (up-for-grabs.net)](https://up-for-grabs.net/#/)
-- 
+
 ## Forking Repository
 Once, you have figured out which project you want to contribute to, you can create a fork. A fork in github is an exact copy of some existing repository but under your username or org. You have full access to the forked repository, consider it your copy of code. You are going to add stuff here.
 ![[Excalidraw/Drawing 2022-05-06 15.47.46.excalidraw.png]]
@@ -40,6 +40,6 @@ Usually, any open source project has a very high commit frequency, as there are 
 - A fork can be created under any `user` or `org`, you can have a fork under org to share across the team
 - As long as your `.git` folder is intact, you can recover any changes you lose from the working directory
 - Pull requests are not essential, but help the maintainer when reviewing changes
-- 
+
 ## Conclusion
 This note only covers the bare minimum required to start contributing to git projects. Additional reading is recommended to understand git fundamentals.
