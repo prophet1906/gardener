@@ -53,10 +53,10 @@ The figure above illustrates abstract OAuth 2.0 flow with interaction between th
 Authorization grant is a credential representing resource owner's authorization used by the client to obtain an access token.
 
 There are 4 types of authorization grant:
-1. [[#^9336ba |Authorization Code Grant]]
-2. [[#^08cabc |Implicit Grant]]
-3. [[#^b36e08 |Resource Owner Password Credentials Grant]]
-4. [[#^ca7005 |Client Credentials Grant]]
+1. [[#Authorization Code Grant]]
+2. [[#Implicit Grant]]
+3. [[#Resource Owner Password Credentials Grant]]
+4. [[#Client Credentials Grant]]
 
 [RFC 6749: The OAuth 2.0 Authorization Framework)](https://www.rfc-editor.org/rfc/rfc6749.html) also provides extensibility mechanism for defining additional types.
 
@@ -124,8 +124,6 @@ To request an access token, the client obtains authorization from the resource o
 
 ### Authorization Code Grant
 
-^9336ba
-
 The authorization code grant type is used to obtain both access tokens and refresh tokens and is optimized for confidential clients.
 Since this is a redirection-based flow, the client must be capable of interacting with the resource owner's user-agent (typically a web browser) and capable of receiving incoming requests (via redirection) from the authorization server. 
 
@@ -140,8 +138,6 @@ The lines illustrating steps A, B, C are broken into two parts as they pass thro
 
 
 ### Implicit Grant
-
-^08cabc
 
 The implicit grant type is used to obtain access tokens(without any support for refresh token) and is optimized for public clients known to operate a particular redirection URI. These clients are typically implemented in a browser using a scripting language such as Javascript.
 
@@ -169,8 +165,6 @@ The lines illustrating steps A and B are broken into two parts as they pass thro
 
 ### Resource Owner Password Credentials Grant
 
-^b36e08
-
 The resource owner password credentials grant type is suitable in cases where the resource owner has a trust relationship with the client, such as the device operating system or a highly privileged application.
 
 This grant type is suitable for clients capable of obtaining the resource owner's credentials (username and password, typically using an interactive form).  It is also used to migrate existing clients using direct authentication schemes such as HTTP Basic or Digest authentication to OAuth by converting the stored credentials to an access token.
@@ -184,8 +178,6 @@ Example - Standalone applications in your device like netflix app in andorid pho
 ![[Excalidraw/oauth/resource-owner-password-credentials-flow.excalidraw.png]]
 
 ### Client Credentials Grant
-
-^ca7005
 
  The client can request an access token using only its client credentials (or other supported means of authentication) when the client is requesting access to the protected resources under its control, or those of another resource owner that have been previously arranged with the authorization server).
 
