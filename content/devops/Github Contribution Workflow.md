@@ -16,23 +16,23 @@ When starting your open source contribution journey, the first step is to find a
 
 ## Forking Repository
 Once, you have figured out which project you want to contribute to, you can create a fork. A fork in github is an exact copy of some existing repository but under your username or org. You have full access to the forked repository, consider it your copy of code. You are going to add stuff here.
-![[Excalidraw/Drawing 2022-05-06 15.47.46.excalidraw.png]]
+![[Excalidraw/github/fork.excalidraw.png]]
 
 ## Developing in Forked Repository
 Before you can start contributing to any project, you need to first clone the forked repository in your development machine. Cloning will bring a copy of your forked repository to your local system. Once you have cloned the forked repository, you can start doing changes.  In the figure below, we start by creating `file1` in step 3 and committing them to the local branch `feature-branch`. After committing targeted changes in the local branch, you can push this local branch to a remote forked repository. After reviewing code changes, you can either merge these changes to the `main` branch or create a pull request against the `upstream` source project. The following figure shows the workflow used to do changes in a forked repo.
-![[Excalidraw/Drawing 2022-05-06 15.52.12.excalidraw.png]]
+![[Excalidraw/github/develop-in-fork.excalidraw.png]]
 
 ### Staging changes
 Any file changes(including creation & deletion) stay in the working area by default. Git also provides us with a preparation area called staging. Whatever is present in staging gets saved permanently to `.git` when we commit. The following figure shows how the file changes move when using git commands.
-![[Excalidraw/Drawing 2022-05-07 09.09.16.excalidraw.png]]
+![[Excalidraw/github/staging-process.excalidraw.png]]
 
 ## Pull Requests
 Pull requests are not part of git, but rather part of git-based websites. Pull requests provide easy to use interface to review changes done by contributors and approve, request changes or merge them in your repo. A pull request has 2 parts to it, `base(target)` refers to the place where you want to contribute, and `compare(source)` refers to the place from where the changes should be picked for contribution. Both `base` and `compare` can refer to different repo and branch. The following figure shows how pull requests help maintainers merge changes to their repositories.
-![[Excalidraw/Drawing 2022-05-07 08.38.17.excalidraw.png]]
+![[Excalidraw/github/pull-request.excalidraw.png]]
 
 ## Sync Fork Repository
 Usually, any open source project has a very high commit frequency, as there are so many contributors who keep on adding stuff on the go. This also means, your fork is going to go out-of-sync/outdated very frequently. Thus, we need to keep `main` from our fork repository in sync with `main` from the source project. This can be done using the concept of upstream. Your local git repository has a table of remote URLs, this can be viewed using `git remote -v`. You can configure your local repository to have an `upstream` remote URL referring to the source project repo. You always pull changes from `upstream: main` and push them to `origin: main`.
-![[Excalidraw/Drawing 2022-05-07 09.18.20.excalidraw.png]]
+![[Excalidraw/github/sync-fork.excalidraw.png]]
 
 ## Important Tips
 - Avoid changes to `main` branches, if you commit something in main and it diverges from `upstream: main`, it will become very difficult to reconcile changes

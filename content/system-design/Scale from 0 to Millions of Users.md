@@ -7,11 +7,11 @@ tags:
 
 ## Single Server Setup
 The Design of every complex system starts with something simple. Consider a single server setup where everything is running in on one server: web, app, DB, cache, etc. as shown below.
-![[Excalidraw/Drawing 2022-04-30 21.28.47.excalidraw.png]]
+![[Excalidraw/system-design/single-server-setup.excalidraw.png]]
 
 ## Basic Flow
 To understand this setup, we can inspect **request flow** and **traffic source**.
-![[Excalidraw/Drawing 2022-04-30 21.57.17.excalidraw.png]]
+![[Excalidraw/system-design/basic-flow.excalidraw.png]]
 
 ### Request flow
 1. Users access the server using domain names from the browser/app
@@ -26,7 +26,7 @@ To understand this setup, we can inspect **request flow** and **traffic source**
 
 ## Database
 Growing user base requires more servers. The most basic segregation we can do here is separating web/mobile(web tier) and database(data tier) servers. This decoupling will allow them to be scaled independently.
-![[Excalidraw/Drawing 2022-04-30 22.25.25.excalidraw.png]]
+![[Excalidraw/system-design/database-decoupling.excalidraw.png]]
 
 ### Which databases to use?
 We have choice between relational and non-relational databases.
