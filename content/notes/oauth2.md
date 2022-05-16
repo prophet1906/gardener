@@ -53,10 +53,10 @@ The figure above illustrates abstract OAuth 2.0 flow with interaction between th
 Authorization grant is a credential representing resource owner's authorization used by the client to obtain an access token.
 
 There are 4 types of authorization grant:
-1. [[#Authorization Code Grant]]
-2. [[#Implicit Grant]]
-3. [[#Resource Owner Password Credentials Grant]]
-4. [[#Client Credentials Grant]]
+1. Authorization Code Grant
+2. Implicit Grant
+3. Resource Owner Password Credentials Grant
+4. Client Credentials Grant
 
 [RFC 6749: The OAuth 2.0 Authorization Framework)](https://www.rfc-editor.org/rfc/rfc6749.html) also provides extensibility mechanism for defining additional types.
 
