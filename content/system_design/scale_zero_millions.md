@@ -62,5 +62,5 @@ For most cases relational databases are best option given historical track recor
 ## Conclusion: Millions of users and beyond
 
 ## References
-- [[books/System Design Interview by Alex Xu]]
+- [[books/sys_design_alex_xu]]
 
