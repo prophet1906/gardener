@@ -33,7 +33,7 @@ OAuth defines four roles:
 3. **Client** - An application making protected resource requests on behalf of the resource owner and with its authorization. The term "client" does not imply any particular implementation characteristics (e.g., wheather the application executes on a server, a desktop, or other devices). Example - Twitter web/android app
 4. **Authorization Server** - The server issuing access tokens to the client after successfully authenticating the resource owner and obtaining authorization. Example - [Google Identity Service](https://developers.google.com/identity)
 
-Real world example showing all roles - When you press login with google button in twitter(**Client**) login page, it redirects you to google(**Authorization Server**) login page. After logging into google, it requests your(**Resource Owner**) to allow access to your contacts from People API(**Resource Server**). Twitter uses this contact info to suggest people to follow.
+Real world example showing all roles - When you press login with google button in twitter(**Client**) login page, it redirects you to google(**Authorization Server**) login page. After logging into google, it requests your(**Resource Owner**) permission to allow access to your contacts from People API(**Resource Server**). Twitter uses this contact info to suggest people to follow.
 
 ### Protocol Flow
 ![[Excalidraw/oauth/abstract-protocol-flow.excalidraw.png]]
