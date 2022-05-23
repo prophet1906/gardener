@@ -22,13 +22,13 @@ Given below are some problems associated with array:
 
 Apart from the issues above, the complexity is also very bad for frequently used operations in array.
 
-| Array Operation                | Real Time Complexity | Assumed Time Complexity |
-| ------------------------------ | -------------------- | ----------------------- |
-| Access i-th element            | O($\sqrt{N}$)        | O(1)                    |
-| Traverse all elements          | O(N + $\sqrt{N}$)    | O(N)                    |
-| Override element at i-th index | O($\sqrt{N}$)        | O(1)                    |
-| Insert element E               | O(N + $\sqrt{N}$)    | O(N)                    |
-| Delete element E               | O(N + $\sqrt{N}$)    | O(N)                    |
+|        Array Operation         | Real Time Complexity | Assumed Time Complexity |
+|:------------------------------:|:--------------------:|:-----------------------:|
+|      Access i-th element       |    O($\sqrt{N}$)     |          O(1)           |
+|     Traverse all elements      |  O(N + $\sqrt{N}$)   |          O(N)           |
+| Override element at i-th index |    O($\sqrt{N}$)     |          O(1)           |
+|        Insert element E        |  O(N + $\sqrt{N}$)   |          O(N)           |
+|        Delete element E        |  O(N + $\sqrt{N}$)   |          O(N)           |
 
 ## Collection Design
 ![[Excalidraw/collections/collections.excalidraw.png]]
@@ -78,10 +78,10 @@ LinkedList has same implementation as doubly linked list and uses pointers to tr
 
 ### Performance Comparison
 
-|            | get  | add        | contains | next | remove |
-| ---------- | ---- | ---------- | -------- | ---- | ------ |
-| ArrayList  | O(1) | O(N), Ω(1) | O(N)     | O(1) | O(N)   |
-| LinkedList | O(N) | O(1)       | O(N)     | O(1) | O(N)   |
+|            | get  |    add     | contains | next | remove |
+|:----------:|:----:|:----------:|:--------:|:----:|:------:|
+| ArrayList  | O(1) | O(N), Ω(1) |   O(N)   | O(1) |  O(N)  |
+| LinkedList | O(N) |    O(1)    |   O(N)   | O(1) |  O(N)  |
 
 ## Maps
 Maps are collections of pairs, they have keys and values. Dictionary is a good example of map, where you find meaning of word by using word as key. In java maps, keys are unique, and the uniqueness is defined by keys equals/hashcode method. Use maps over other data structures when doing frequent lookups.
@@ -103,10 +103,10 @@ Following example shows world population stored in treemap, it is easy to find c
 JDK also has other implementations of Map as well like EnumMap, LinkedHashMap & IdentityHashMap. Read official docs to know more in-depth.
 
 ### Performance Comparison
-|         | put        | get        | containsKey | next          |
-| ------- | ---------- | ---------- | ----------- | ------------- |
+|         |    put     |    get     | containsKey |     next      |
+|:-------:|:----------:|:----------:|:-----------:|:-------------:|
 | HashMap | O(N), Ω(1) | O(N), Ω(1) | O(N), Ω(1)  | O(Capacity/N) |
-| TreeMap | O(log(N))  | O(log(N))  | O(log(N))   | O(log(N))     |
+| TreeMap | O(log(N))  | O(log(N))  |  O(log(N))  |   O(log(N))   |
 
 ## Sets
 
