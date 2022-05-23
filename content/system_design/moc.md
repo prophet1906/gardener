@@ -1,5 +1,6 @@
 ---
 title: "System Design MOC"
+draft: true
 tags:
 - moc
 - system-design

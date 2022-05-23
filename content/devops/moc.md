@@ -1,5 +1,6 @@
 ---
 title: "DevOps MOC"
+draft: true
 tags:
 - moc
 - github

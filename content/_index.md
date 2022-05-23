@@ -8,6 +8,6 @@ In this garden 🏡, I publish my learning journey, and projects as [obsidian](h
 
 ## Recent Notes
 - [[random/java_11_collections|Java 11 Fundamentals: Collections]]
-- [[notes/oauth2|The OAuth 2.0 Authorization Framework]]
+- [[random/oauth2|The OAuth 2.0 Authorization Framework]]
 - [[devops/gh_contribution|Github: Contribution Workflow]]
 

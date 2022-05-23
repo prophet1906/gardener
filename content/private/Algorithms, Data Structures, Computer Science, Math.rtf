@@ -1,0 +1,1896 @@
+{\rtf1\ansi\deff0\deflang2057\plain\fs24\fet1
+{\fonttbl
+{\f0\froman Arial;}
+}
+{\colortbl
+;
+\red83\green179\blue36;
+\red238\green255\blue229;
+\red0\green170\blue255;
+\red229\green246\blue255;
+\red115\green123\blue128;
+\red255\green245\blue209;
+\red96\green117\blue128;
+\red255\green255\blue255;
+\red95\green204\blue41;
+}
+{\info
+{\createim\yr2022\mo5\dy23\hr10\min59}
+}
+
+\paperw11907\paperh16840\margl1800\margr1800\margt1440\margb1440
+\slmult0\cbpat2\ltrpar\li0
+{\cf1\cb2\fs28
+Algorithms, Data Structures, Computer Science, Math
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+Java
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Concepts
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+JVM
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Heap vs. Stack
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+The main difference between heap and stack is that stack memory is used to store local variables and function call while heap memory is used to store objects in Java. No matter, where the object is created in code e.g. as a member variable, local variable or class variable,  they are always created inside heap space in Java.
+\par\pard\plain}
+\slmult0\ltrpar\li600
+{\fs20
+Comparable vs. Comparator
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+In brief, a class that implements Comparable will be comparable, which means it instances can be compared with each other.
+
+A class that implements Comparator will be used in mainly two situations:\u160\'3f1) It can be passed to a sort method, such as Collections.sort() or Arrays.sort(), to allow precise control over the sort order and\u160\'3f2) It can also be used to control the order of certain data structures, such as sorted sets (e.g. TreeSet) or sorted maps (e.g., TreeMap).
+\par\pard\plain}
+\slmult0\ltrpar\li600
+{\fs20
+hashCode() and equals() Contract 
+{\field{\*\fldinst HYPERLINK "http://www.programcreek.com/2011/07/java-equals-and-hashcode-contract/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Simple Java Review 
+{\field{\*\fldinst HYPERLINK "http://www.programcreek.com/simple-java/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\cbpat6\ltrpar\li400
+{\cf5\cb6\fs20
+Java Collections 
+{\field{\*\fldinst HYPERLINK "http://cs.lmu.edu/~ray/notes/collections/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Collection
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+extends Iterable
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Collection API
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Subclasses
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+List API
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\b\cf7\fs20
+ArrayList 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f A List backed by an array, where the array has a length (called "capacity") that is at least as large as the number of elements (the list's "size"). 
+\u8226\'3f When size exceeds capacity (when the (capacity + 1)-th element is added), the array is recreated with a new capacity of (new length * 1.5)--this recreation is fast, since it uses System.arrayCopy(). 
+\u8226\'3f Deleting and inserting/adding elements requires all neighboring elements (to the right) be shifted into or out of that space. 
+\u8226\'3f Accessing any element is fast, as it only requires the calculation (element-zero-address * desired-index * element-size) to find it's location. 
+\u8226\'3f In most situations, an ArrayList is preferred over a LinkedList.
+\par\pard\plain}
+\slmult0\ltrpar\li1400
+{\fs20
+List implemented with a resizable array.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\b\cf7\fs20
+LinkedList 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f A List backed by a set of objects, each linked to its "previous" and "next" neighbors. 
+\u8226\'3f A LinkedList is also a Queue and Deque. 
+\u8226\'3f Accessing elements is done starting at the first or last element, and traversing until the desired index is reached. 
+\u8226\'3f Insertion and deletion, once the desired index is reached via traversal is a trivial matter of re-mapping only the immediate-neighbor links to point to the new element or bypass the now-deleted element.
+
+\par\pard\plain}
+\slmult0\ltrpar\li1400
+{\fs20
+Doubly-linked list implementation.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+Good when insertions and deletions are frequent.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+Access via the Queue interface gives you a FIFO queue.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Set API
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\b\cf7\fs20
+HashSet 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f A Set backed by a HashMap. 
+\u8226\'3f Fastest and smallest memory usage, when ordering is unimportant.
+\par\pard\plain}
+\slmult0\ltrpar\li1400
+{\fs20
+A simple set that stores elements based on their hash codes.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+If the hashCode() function is good, the add, remove, and contains methods should run in near constant time.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+LinkedHashSet 
+{\field{\*\fldinst HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/LinkedHashSet.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f A HashSet with the addition of a linked list to associate elements in insertion order. 
+\u8226\'3f The "next" element is the next-most-recently inserted element.
+\par\pard\plain}
+\slmult0\ltrpar\li1400
+{\fs20
+A HashSet whose values, when you iterate over them, come out in the same order you put them in.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\b\cf7\fs20
+TreeSet 
+{\field{\*\fldinst HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f A Set where elements are ordered by a Comparator (typically natural ordering). 
+\u8226\'3f Slowest and largest memory usage, but necessary for comparator-based ordering.
+
+\par\pard\plain}
+\slmult0\ltrpar\li1400
+{\fs20
+A set whose values, when you iterate over them, come out in sorted order.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+A red-black tree is used behind the scenes.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+EnumSet 
+{\field{\*\fldinst HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/EnumSet.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f An extremely fast and efficient Set customized for a single enum type.
+\par\pard\plain}
+\slmult0\ltrpar\li1000
+{\fs20
+Queue API
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\b\cf7\fs20
+Deque 
+{\field{\*\fldinst HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/Deque.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+A linked list that is typically only added to and read from either end (not the middle).
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+Queue 
+{\field{\*\fldinst HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/Queue.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f An interface that represents a Collection where elements are, typically, added to one end, and removed from the other (FIFO: first-in, first-out).
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+Stack 
+{\field{\*\fldinst HYPERLINK "http://docs.oracle.com/javase/7/docs/api/java/util/Stack.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1200
+\u8226\'3f An interface that represents a Collection where elements are, typically, both added (pushed) and removed (popped) from the same end (LIFO: last-in, first-out).
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\b\cf7\fs20
+PriorityQueue 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+An unbounded priority queue implemented with a heap.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+Uses the element's natural ordering or a comparator passed in at construction time.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+The head element is the smallest.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+remove(Object) runs in linear time. peek, element, and size run in constant time.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1400
+{\fs20
+offer(), poll(), remove() and add run in logarithmic time.
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Map
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Map API
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\b\cf7\fs20
+HashMap 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1000
+A Map where keys are unordered, and backed by a Hashtable.
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+Good general-purpose map that hashes on element keys.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Nulls are supported for keys and values.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\b\cf7\fs20
+TreeMap 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1000
+A Map where keys are ordered by a Comparator (typically natural ordering).
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+A map whose keys, when you iterate over them, come out in sorted order.  A red-black tree is used behind the scenes.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+LinkedHashMap 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/LinkedHashMap.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1000
+Keys are ordered by insertion order.
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+A HashMap whose entries are iterated over in the order they were inserted.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+IdentityHashMap 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/IdentityHashMap.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+A map that uses ==, rather than Object.equals() on its keys.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\cf7\fs20
+Runs fast.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+WeakHashMap 
+{\field{\*\fldinst HYPERLINK "https://docs.oracle.com/javase/7/docs/api/java/util/WeakHashMap.html"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+A hash map with weak keys \u8212\'3f when a key object isn't referenced by anything except the key reference in the map, the entry will get removed.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Sorted Map API
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\i\cf7\fs20
+HashTable
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+The ancient thread-safe map from Java 1.0. No need to use it anymore. Use a ConcurrentHashMap if you need thread safety, or HashMap if you do not.
+}
+\par\pard\plain
+\slmult0\cbpat6\ltrpar\li400
+{\b\cf5\cb6\fs20
+Data Structure Comparisons
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\b\cf7\fs20
+ArrayList vs. LinkedList 
+{\field{\*\fldinst HYPERLINK "http://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+ArrayList
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Random read access in constant time
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Adding or removing requires shifting of all latter elements
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+If you add more elements than the capacity of the underlying array, a new array (1.5 times the size) is allocated, and the old array is copied to the new one, so adding to an ArrayList is O(n) in the worst case but constant on average.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Since the underlying implementation is an array, the array must be resized if you add a lot of elements. To avoid the high cost of resizing when you know you're going to add a lot of elements, construct the ArrayList with a higher initial capacity.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+ArrayLists take up as much memory as is allocated for the capacity, regardless of whether elements have actually been added.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+LinkedList
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Allows for constant-time insertions or removals using iterators
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Only sequential access of elements
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Each element of a LinkedList has more overhead since pointers to the next and previous elements are also stored. ArrayLists don't have this overhead.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\b\cf7\fs20
+The main benefits of using a LinkedList arise when you re-use existing iterators to insert and remove elements.  These operations can then be done in O(1) by changing the list locally only.
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\b\cf7\fs20
+HashSet vs. TreeSet 
+{\field{\*\fldinst HYPERLINK "http://stackoverflow.com/questions/1463284/hashset-vs-treeset"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+Algorithm Theory
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Classifying Algorithms
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+By Problem Domain
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Numeric
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Super large numbers, floating-point numbers with errors,...
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+String
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Pattern matching, compression, sequencing, cryptography,...
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Sorting
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Putting things in order
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Searching
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Finding an element by search key
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\cf7\fs20
+Combinatoric
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Permutations, combinations, subsets, ...
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Partitioning
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Fair division,...
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Network
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Routing, spanning trees, connectivity, flow, ...
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+By Design Strategy
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Brute Force
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Enumerate all possible solutions, unintelligently, and try them all.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Pre-Structuring
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Pre-arrrange data for faster processing.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Divide and Conquer
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Break down a problem into multiple independent subproblems, solve the subproblems (recursively), and combine those solutions into a solution for the original problem.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Decrease and Conquer
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Like Divide and Conquer but break down in to one subproblem.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Transform and Conquer
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Reformulate problem into an equivalent problem in another domain.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Input Enhancement
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Pre-calculate results for certain inputs, or create a cache of partial results, so that the actual run is faster.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Dynamic Programming
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Solve an optimization problem by breaking it down into multiple overlapping subproblems, solving the subproblems (recursively), and combining those solutions into a solution for the original problem.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Greedy Algorithm
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+When searching for solution, take the most promising next step and never backtrack.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Backtracking
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Systematically generate possible solutions to a problem sometimes having to back up when realizing your partially generated candidate can\u8217\'3ft possibly be extended to a real solution.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Branch and Bound
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Backtrack in an optimization setting
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Other Strategies
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Hill Climbing
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Solve (or find an approximate solution to) an optimization problem by generating candidate solutions that are (hopefully) improvements over the previous candidate.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Particle Swarm
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Solve an optimization problem with a bunch of decentralized particles all searching for a solution with something that looks like its has a collective organization (e.g. ant colonies, bird flocks, animal herds, etc.)
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Las Vegas
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Non-Deterministic
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Generate possible solutions non-deterministically in a way that always produces the correct answer but makes no guarantees on how long it will run or how much space it will need (in the worst case).
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Monte Carlo
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Non-Deterministic
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Generate possible solutions non-deterministically in a way that has has time and space guarantees but has a small probablility of giving the wrong answer.The probability of error can be reduced by running the algorithm longer.
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+By Complexity
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Constant O(1)
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Logarithmic O(logn)
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Linear O(n)
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Linearithmic O(nlogn)
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Polynomial
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Quadratic O(n^2)
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Cubic O(n^3)
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Exponential (k^n)
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+By Data Structure
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Organizational
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Set
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Linear
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Hierarchical
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Network
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Implementational
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Hash Tables
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Trees
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Skip Lists
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+Data Structures
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Choosing the Right Data Structure 
+{\field{\*\fldinst HYPERLINK "http://stackoverflow.com/questions/21974361/what-java-collection-should-i-use"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+API Methods to Know
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+Algorithms
+}
+\par\pard\plain
+\slmult0\cbpat6\ltrpar\li400
+{\cf5\cb6\fs20
+General
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Boyer-Moore Algorithm
+}
+\par\pard\plain
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs24
+Sorting
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Concept
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Stable vs Unstable
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Stable if two objects with equal keys appear in the same order in sorted output as they appear in the input unsorted array
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Quicksort vs Mergesort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\b\cf7\fs20
+Use Mergesort if guaranteed O(nlogn) runtime is needed.  Use Quicksort otherwise.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Both O(nlogn) time
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Quicksort faster on average
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Quicksort more efficient with space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Quicksort is in-place
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Mergesort uses O(n) auxiliary space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Quicksort worst runtime is O(n\u178\'3f)
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Mergesort is guaranteed O(nlogn) runtime
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\b\cf7\fs20
+Sorting Algorithm Comparison Chart
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Sorting Algorithms
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Bubble Sort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Complexity
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Average Case: O(n\u178\'3f), O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\cf7\fs20
+Worst Case: O(n\u178\'3f) time, O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Stable
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Selection Sort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Complexity
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Average Case: O(n\u178\'3f), O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\cf7\fs20
+Worst Case: O(n\u178\'3f) time, O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Unstable
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Insertion Sort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\b\cf7\fs20
+Left side always sorted
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Algorithm
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Complexity
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\b\cf7\fs20
+Best case is a near-sorted input
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Average Case: O(n\u178\'3f), O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\cf7\fs20
+Worst Case: O(n\u178\'3f) time, O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Stable Sort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Online Algorithm
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Mergesort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Complexity
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Average Case: O(nlogn), O(n) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\cf7\fs20
+Worst Case: O(nlogn) time, O(n) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Stable
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Linked List Implementation 
+{\field{\*\fldinst HYPERLINK "http://www.programcreek.com/2012/11/leetcode-solution-merge-sort-linkedlist-in-java/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Quicksort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Complexity
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\cf7\fs20
+Worst Case: O(n\u178\'3f) time, O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Unstable
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Heapsort
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Complexity
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\cf7\fs20
+Worst Case: O(nlogn) time, O(1) space
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\cf5\fs20
+Unstable
+}
+\par\pard\plain
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs24
+Searching
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Searching Algorithms
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\cf7\fs20
+Binary Search
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\b\cf7\fs20
+O(logn) time
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Breadth-First Search 
+{\field{\*\fldinst HYPERLINK "https://www.hackerearth.com/notes/graph-theory-breadth-first-search/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Depth-First Search
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Dijkstra's Algorithm
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+A*
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+Math
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Math Theory
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Data Types
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Math Properties
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Logical Formulas
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Set Theory
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Set Operators
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Set Theorems
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Numbers
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Counting
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Fencepost Problem
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+100-ft fence post
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+10 of 10-ft segments
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+Span always touches an extra, so 11 posts
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Prime Numbers
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+A number greater than 1
+and only divisible by itself
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+List of Primes (1-101)
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+2, 3, 5, 7, 11,  13, 17, 19, 23, 29,  31, 37, 41, 43, 47,  53, 59, 61, 67, 71,  73, 79, 83, 89, 97, 101
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+GCD of Two Numbers
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Multiplying evens and odds
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+Even*Odd = Even Even*Even = EvenOdd*Odd = OddOdd*Odd*Even = EvenAnything with even = even since essentially factored by 2
+\par\pard\plain}
+\slmult0\ltrpar\li600
+{\fs20
+Sum of 1+2..+n
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+n(n+1)/2
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Discrete Math
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Permutation
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Combination
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Modulo Tricks 
+{\field{\*\fldinst HYPERLINK "https://www.hackerearth.com/notes/powerful-tricks-with-calculation-modulo/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+Flow of Control
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Iterative
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Recursion
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Traditional Recursion
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+In traditional recursion, the typical model is that you perform your recursive calls first, and then you take the return value of the recursive call and calculate the result. 
+
+In this manner, you don't get the result of your calculation until you have returned from every recursive call.
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+The recursive call, when it happens, comes before other processing in the function
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Tail Recursion
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+In tail recursion, you perform your calculations first, and then you execute the recursive call, passing the results of your current step to the next recursive step. This results in the last statement being in the form of "(return (recursive-function params))".Basically, the return value of any given recursive step is the same as the return value of the next recursive call.The consequence of this is that once you are ready to perform your next recursive step, you don't need the current stack frame any more. 
+
+This allows for some optimization. In fact, with an appropriately written compiler, you should never have a stack overflow snicker with a tail recursive call. Simply reuse the current stack frame for the next recursive step. 
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+The processing occurs before the recursive call. Choosing between the two recursive styles may seem arbitrary, but the choice can make all the difference.
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+General Knowledge
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+ADEPT Method 
+{\field{\*\fldinst HYPERLINK "http://betterexplained.com/articles/adept-method/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+Fermi Problems 
+{\field{\*\fldinst HYPERLINK "http://www.fermiquestions.com/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Solve by Dimensional Analysis 
+{\field{\*\fldinst HYPERLINK "http://www.fermiquestions.com/tutorial#subsec-Basics-Dimensional-Analysis"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\cbpat4\ltrpar\li200
+{\cf3\cb4\fs28
+CS Concepts
+}
+\par\pard\plain
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs20
+Big O & Time Complexity 
+{\field{\*\fldinst HYPERLINK "http://bigocheatsheet.com/"}{\fldrslt (link)}}
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Big O
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+Big-Oh (the "O" stands for "order of") notation is concerned with what happens for very large values of N, therefore only the largest term in a polynomial is needed. All smaller terms are dropped.By default it usually refers to the average case, using random data. 
+\par\pard\plain}
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs20
+Bit Manipulation
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Truth Table
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Base 2 Table
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Binary to Decimal Table
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Boolean Properties
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Bitwise Operators
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+AND ( & )
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+OR ( | )
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+NOT ( ~ )
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+XOR ( ^ )
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Left Shift ( << )
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Shift k bits and append 0 to end
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+= to multiplying the bit pattern with 2k
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\b\cf7\fs20
+Right Shift ( >> )
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Shift k bits and append 1 at the end
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+= to dividing bit pattern by 2k
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Useful Operations
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Operations on integers
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+Get the maximum integerint maxInt = ~(1 &lt;&lt; 31);
+int maxInt = (1 &lt;&lt; 31) - 1;
+int maxInt = (1 &lt;&lt; -1) - 1;
+Get the minimum integerint minInt = 1 &lt;&lt; 31;
+int minInt = 1 &lt;&lt; -1;
+Get the maximum longlong maxLong = ((long)1 &lt;&lt; 127) - 1;
+Multiplied by 2n &lt;&lt; 1; // n*2
+Divided by 2n &gt;&gt; 1; // n/2
+Multiplied by the m-th power of 2n &lt;&lt; m;
+Divided by the m-th power of 2n &gt;&gt; m;
+Check odd number(n &amp; 1) == 1;
+Exchange two valuesa ^= b;
+b ^= a;
+a ^= b;
+Get absolute value(n ^ (n &gt;&gt; 31)) - (n &gt;&gt; 31);
+Get the max of two valuesb &amp; ((a-b) &gt;&gt; 31) | a &amp; (~(a-b) &gt;&gt; 31);
+Get the min of two valuesa &amp; ((a-b) &gt;&gt; 31) | b &amp; (~(a-b) &gt;&gt; 31);
+Check whether both have the same sign(x ^ y) &gt;= 0;
+Calculate 2^n2 &lt;&lt; (n-1);
+Whether is factorial of 2n &gt; 0 ? (n &amp; (n - 1)) == 0 : false;
+Modulo 2^n against mm &amp; (n - 1);
+Get the average(x + y) &gt;&gt; 1;
+((x ^ y) &gt;&gt; 1) + (x &amp; y);
+Get the m-th bit of n (from low to high)(n &gt;&gt; (m-1)) &amp; 1;
+Set the m-th bit of n to 0 (from low to high)n &amp; ~(1 &lt;&lt; (m-1));
+n + 1-~n
+n - 1~-n
+Get the contrast number~n + 1;
+(n ^ -1) + 1; 
+if (x==a) x=b; if (x==b) x=a;x = a ^ b ^ x;
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Setting the Kth bit
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+n | (1 &lt;&lt; K-1)
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Clearing the Kth bit
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+n &amp; ~(1 &lt;&lt; K - 1)
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Toggle the Kth bit
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+ n ^ (1 &lt;&lt; K - 1)
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Check if the Kth bit set
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+ n &amp; (1 &lt;&lt; K-1)
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Check if two ints are equal
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+num1 ^ num2
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Check if number is divisible by 2
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+if(x &amp; 1 == 0)
+   return True;
+else
+   return False;
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Check if a num is power of 2
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Minimum of two numbers
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+y ^ ((x ^ y) &amp; -(x &lt; y));
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Maximum of two numbers
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+x ^ ((x ^ y) &amp; -(x &lt; y));
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+GCD of two numbers
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+while(b^=a^=b^=a%=b);
+return a;
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Return the right-most 1 in binary set
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+x ^ ( x &amp; (x-1))
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Swap two integers
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+a ^= b;
+b ^= a;
+a ^= b;
+\par\pard\plain}
+\slmult0\ltrpar\li600
+{\fs20
+XOR Properties
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Without using '^'
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+x ^ y == (~x &amp; y) | (x &amp; ~y)
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Swapping x and y without a temp
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+  x = x ^ y ;
+  y = x ^ y ;
+  x = x ^ y ;
+\par\pard\plain}
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs20
+Dynamic Programming
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+DP Explanation
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Based on recurrent formula and one (or some) starting states
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Sub-solution of problem is constructed from previous ones
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Solutions have a polynomial complexity, faster than backtracking or brute-force
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Solving a DP problem
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+1. Split the problem into overlapping sub-problems.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+2. Solve each sub-problem recursively.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+3. Combine the solutions to sub-problems into a solution for the given problem.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+4. Don\u8217\'3ft compute the answer to the same problem more than once.
+}
+\par\pard\plain
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs20
+Greedy Algorithm
+}
+\par\pard\plain
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs20
+Backtracking
+}
+\par\pard\plain
+{\slmult0\ltrpar\li400
+Recur\u173\'3fsion is the key in back\u173\'3ftrack\u173\'3fing pro\u173\'3fgram\u173\'3fming. As the name sug\u173\'3fgests we back\u173\'3ftrack to find the solu\u173\'3ftion. 
+
+We start with one pos\u173\'3fsi\u173\'3fble move out of many avail\u173\'3fable moves and try to solve the prob\u173\'3flem if we are able to solve the prob\u173\'3flem with the selected move then we will print the solu\u173\'3ftion else we will back\u173\'3ftrack and select some other move and try to solve it. If none if the moves work out we will claim that there is no solu\u173\'3ftion for the problem.
+\par\pard\plain}
+\slmult0\ltrpar\li600
+{\fs20
+General Algorithm
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+Pick a starting point.
+while(Problem is not solved) 
+\{
+	For each path from the starting point.
+	\{
+		check if selected path is safe, if yes select it
+                and make recursive call to rest of the problem
+
+		If recursive calls returns true, then return true.
+		else undo the current move and return false.
+	\}
+	If none of the move works out, return false, NO SOLUTON.
+
+\}
+\par\pard\plain}
+\slmult0\cbpat9\ltrpar\li400
+{\cf8\cb9\fs20
+System Design Concepts
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Concurrency
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Concurrency
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Concurrency is when two or more tasks can start, run, and complete in overlapping time periods. It doesn't necessarily mean they'll ever both be running at the same instant. Eg. multitasking on a single-core machine.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Parallelism
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Parallelism is when tasks literally run at the same time, eg. on a multicore processor.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Race Condition
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+A race condition occurs when two or more threads can access shared data and they try to change it at the same time. Because the thread scheduling algorithm can swap between threads at any time, you don't know the order in which the threads will attempt to access the shared data. Therefore, the result of the change in data is dependent on the thread scheduling algorithm, i.e. both threads are "racing" to access/change the data.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Locking
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Lock
+}
+\par\pard\plain
+\slmult0\ltrpar\li1200
+{\fs20
+A lock occurs when multiple processes try to access the same resource at the same time. One process loses out and must wait for the other to finish.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Deadlock
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1000
+Example:Resource A and resource B are used by process X and process YX starts to use A.X and Y try to start using BY 'wins' and gets B firstnow Y needs to use AA is locked by X, which is waiting for Y
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+A deadlock occurs when the waiting process is still holding on to another resource that the first needs before it can finish.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Pessimistic
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1000
+Pessimistic Locking is when you lock the record for your exclusive use until you have finished with it. It has much better integrity than optimistic locking but requires you to be careful with your application design to avoid Deadlocks. To use pessimistic locking you need either a direct connection to the database (as would typically be the case in a two tier client server application) or an externally available transaction ID that can be used independently of the connection.
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+Pessimistic assumes that something will and so locks it.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Optimistic
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1000
+Optimistic Locking is a strategy where you read a record, take note of a version number (other methods to do this involve dates, timestamps or checksums/hashes) and check that the version hasn't changed before you write the record back. When you write the record back you filter the update on the version to make sure it's atomic. (i.e. hasn't been updated between when you check the version and write the record to the disk) and update the version in one hit.
+
+If the record is dirty (i.e. different version to yours) you abort the transaction and the user can re-start it.
+
+This strategy is most applicable to high-volume systems and three-tier architectures where you do not necessarily maintain a connection to the database for your session. In this situation the client cannot actually maintain database locks as the connections are taken from a pool and you may not be using the same connection from one access to the next.
+\par\pard\plain}
+\slmult0\ltrpar\li1200
+{\fs20
+Optimistic assumes that nothing's going to change while you're reading it.
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Optimistic vs. Pessimistic
+}
+\par\pard\plain
+{\slmult0\ltrpar\li1000
+If it's not essential that the data is perfectly read use optimistic. You might get the odd 'dirty' read - but it's far less likely to result in deadlocks and the like.
+
+Most web applications are fine with dirty reads - on the rare occasion the data doesn't exactly tally the next reload does.
+
+For exact data operations (like in banking) use pessimistic. It's essential that the data is accurately read, with no un-shown changes - the extra locking overhead is worth it.
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Semaphore
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+A semaphore is a way to lock a resource so that it is guaranteed that while a piece of code is executed, only this piece of code has access to that resource. This keeps two threads from concurrently accesing a resource, which can cause problems.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Mutual Exclusion
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Mutual exclusion means that only a single thread should be able to access the shared resource at any given point of time. This avoids the race conditions between threads acquireing the resource. Monitors and Locks provide the functionality to do so.
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Mutex vs. Semaphore
+}
+\par\pard\plain
+{\slmult0\ltrpar\li800
+Strictly speaking, a mutex is locking mechanism used to synchronize access to a resource. Only one task (can be a thread or process based on OS abstraction) can acquire the mutex. It means there is ownership associated with mutex, and only the owner can release the lock (mutex).
+
+Semaphore is signaling mechanism (\u8220\'3fI am done, you can carry on\u8221\'3f kind of signal). For example, if you are listening songs (assume it as one task) on your mobile and at the same time your friend calls you, an interrupt is triggered upon which an interrupt service routine (ISR) signals the call processing task to wakeup.
+\par\pard\plain}
+\slmult0\ltrpar\li800
+{\fs20
+Commits
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Two-Phase
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+Three-Phase
+}
+\par\pard\plain
+\slmult0\ltrpar\li1000
+{\fs20
+One-Phase
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Design Patterns
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Creational
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Structural
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Behavioral
+}
+\par\pard\plain
+\slmult0\ltrpar\li400
+{\fs20
+P vs NP Problem
+}
+\par\pard\plain
+{\slmult0\ltrpar\li400
+The P versus NP problem is the determination of whether all NP-problems are actually P-problems. If P and NP are not equivalent, then the solution of NP-problems requires (in the worst case) an exhaustive search, while if they are, then asymptotically faster algorithms may exist.The answer is not currently known, but determination of the status of this question would have dramatic consequences for the potential speed with which many difficult and important problems could be solved.
+\par\pard\plain}
+\slmult0\ltrpar\li600
+{\fs20
+ELI5 Explanation
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+P Problem
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+A problem is assigned to the P (polynomial time) class if there exists at least one algorithm to solve that problem, such that the number of steps of the algorithm is bounded by a polynomial in n, where n is the length of the input.
+\par\pard\plain}
+\slmult0\ltrpar\li600
+{\fs20
+NP Problem
+}
+\par\pard\plain
+{\slmult0\ltrpar\li600
+A problem is assigned to the NP (nondeterministic polynomial time) class if it is solvable in polynomial time by a nondeterministic Turing machine.
+
+A P-problem (whose solution time is bounded by a polynomial) is always also NP. 
+
+If a problem is known to be NP, and a solution to the problem is somehow known, then demonstrating the correctness of the solution can always be reduced to a single P (polynomial time) verification. 
+
+If P and NP are not equivalent, then the solution of NP-problems requires (in the worst case) an exhaustive search.
+\par\pard\plain}
+\slmult0\ltrpar\li400
+{\fs20
+Deterministic vs Non-Deterministic
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Deterministic
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Same input will always produce same output, passing through same sequence of states
+}
+\par\pard\plain
+\slmult0\ltrpar\li600
+{\fs20
+Nondeterministic
+}
+\par\pard\plain
+\slmult0\ltrpar\li800
+{\fs20
+Same input can exhibit different behavior each run
+}
+\par\pard\plain
+}
