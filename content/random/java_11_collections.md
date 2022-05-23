@@ -78,10 +78,10 @@ LinkedList has same implementation as doubly linked list and uses pointers to tr
 
 ### Performance Comparison
 
-|            | get  | add             | contains | next | remove |
-| ---------- | ---- | --------------- | -------- | ---- | ------ |
-| ArrayList  | O(1) | O(N), $\ohm$(1) | O(N)     | O(1) | O(N)   |
-| LinkedList | O(N) | O(1)            | O(N)     | O(1) | O(N)   | 
+|            | get  | add        | contains | next | remove |
+| ---------- | ---- | ---------- | -------- | ---- | ------ |
+| ArrayList  | O(1) | O(N), Ω(1) | O(N)     | O(1) | O(N)   |
+| LinkedList | O(N) | O(1)       | O(N)     | O(1) | O(N)   |
 
 ## Maps
 Maps are collections of pairs, they have keys and values. Dictionary is a good example of map, where you find meaning of word by using word as key. In java maps, keys are unique, and the uniqueness is defined by keys equals/hashcode method. Use maps over other data structures when doing frequent lookups.
@@ -103,10 +103,10 @@ Following example shows world population stored in treemap, it is easy to find c
 JDK also has other implementations of Map as well like EnumMap, LinkedHashMap & IdentityHashMap. Read official docs to know more in-depth.
 
 ### Performance Comparison
-|         | put             | get             | containsKey     | next          |
-| ------- | --------------- | --------------- | --------------- | ------------- |
-| HashMap | O(N), $\ohm$(1) | O(N), $\ohm$(1) | O(N), $\ohm$(1) | O(Capacity/N) |
-| TreeMap | O(log(N))       | O(log(N))       | O(log(N))       | O(log(N))     | 
+|         | put        | get        | containsKey | next          |
+| ------- | ---------- | ---------- | ----------- | ------------- |
+| HashMap | O(N), Ω(1) | O(N), Ω(1) | O(N), Ω(1)  | O(Capacity/N) |
+| TreeMap | O(log(N))  | O(log(N))  | O(log(N))   | O(log(N))     |
 
 ## Sets
 
