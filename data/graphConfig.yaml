@@ -1,6 +1,6 @@
 enableLegend: true
 enableDrag: true
 enableZoom: true
-depth: 2 # set to -1 to show full graph
+depth: -1 # set to -1 to show full graph
 paths:
   - /books: "#ca1919"
