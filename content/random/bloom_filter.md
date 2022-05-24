@@ -1,6 +1,7 @@
 ---
 title: "Bloom Filter"
 tags:
+- algorithm
 - data-structure
 - probability
 ---

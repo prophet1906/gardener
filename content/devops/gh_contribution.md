@@ -43,3 +43,6 @@ Usually, any open source project has a very high commit frequency, as there are 
 
 ## Conclusion
 This note only covers the bare minimum required to start contributing to git projects. Additional reading is recommended to understand git fundamentals.
+
+## Cheatsheet
+[Free Git Book (goalkicker.com)](https://books.goalkicker.com/GitBook/)

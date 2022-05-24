@@ -1,5 +1,5 @@
 ---
-title: "System Design Interview by Alex Xu"
+title: "System Design Interview"
 tags:
 - system-design
 ---
