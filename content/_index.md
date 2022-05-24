@@ -7,6 +7,7 @@ Hi, there 👋. My name is Shubham. I am skilled at solving real world problems 
 In this garden 🏡, I publish my learning journey, and projects as [obsidian](https://obsidian.md/) notes that I will continue to maintain. There is no perfect end state, and it will always be a work in progress!
 
 ## Recent Notes
+- [[random/bloom_filter|Data Structure: Bloom Filter]]
 - [[random/java_11_collections|Java 11 Fundamentals: Collections]]
 - [[random/oauth2|The OAuth 2.0 Authorization Framework]]
 - [[devops/gh_contribution|Github: Contribution Workflow]]
