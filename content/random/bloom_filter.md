@@ -71,7 +71,7 @@ Assume a word that was not added to bloom filter, but returns hash values which 
 // word to be checked - bob
 h1("bob") % 10 = 2
 h2("bob") % 10 = 6
-h2("bob") % 10 = 9
+h3("bob") % 10 = 9
 ```
 
 ![[Excalidraw/bloom_filter/bf3.excalidraw.png]]
