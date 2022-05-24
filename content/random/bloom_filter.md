@@ -10,15 +10,15 @@ You heard about some cool website from your friends. You visit the website and t
 Ever wondered, how they check availability of usernames so fast? when they have millions of registered users.
 
 There are multiple ways to solve this problem -
-1. Linear search - go through database and compare every username with the username you entered to find if it exists. This will probably take years before you can create a new account.
+1. **Linear search** - go through database and compare every username with the username you entered to find if it exists. This will probably take years before you can create a new account.
 
 ![[Excalidraw/bloom_filter/waiting.jpg]]
 
-2. Binary Search - store usernames alphabetically and try finding the entered username using binary search. This is better than previous approach, but still requires many steps when you have millions of users.
+2. **Binary Search** - store usernames alphabetically and try finding the entered username using binary search. This is better than previous approach, but still requires many steps when you have millions of users.
 
 ![[Excalidraw/bloom_filter/binary_search.png]]
 
-3. Trie - store usernames in a trie and try finding the entered username. This have way better performance than previous 2 approaches, but it requires more memory to store millions of users. Also the overhead of maintaining trie is huge for so many users.
+3. **Trie** - store usernames in a trie and try finding the entered username. This have way better performance than previous 2 approaches, but it requires more memory to store millions of users. Also the overhead of maintaining trie is huge for so many users.
 
 ![[Excalidraw/bloom_filter/trie.png]]
 
@@ -34,7 +34,7 @@ A Bloom filter is a space-efficient probabilistic data structure that is used to
 - Deleting elements from filter isn't possible
 
 ## How it works?
-An empty bloom filter is a **bit array** of **n**  bits, all set to zero. We also need **k** hash functions to calculate hash function for a given input. For adding an element to bloom filter we set **k** indices h<sub>1</sub>(x), h<sub>2</sub>(x), ..., h<sub>k</sub>(x) to 1.
+An empty bloom filter is a **bit array** of **n**  bits, all set to zero. We also need **k** hash functions to calculate hash function for a given input. For adding an element to bloom filter we set **k** indices calculated using hash function h<sub>1</sub>(x), h<sub>2</sub>(x), ..., h<sub>k</sub>(x) to 1.
 
 Example - If we have a bloom filter with 10 bits and 3 hash functions h<sub>1</sub>, h<sub>2</sub>, h<sub>3</sub>. Initial value for all bits in bloom filter will be 0. 
 
@@ -74,17 +74,22 @@ h2("bob") % 10 = 6
 h2("bob") % 10 = 9
 ```
 
-Here we never added bob to the bloom filter, but it is still present in filter. This means we be **100%** sure if something isn't available in filter, but not the other way around.
+![[Excalidraw/bloom_filter/bf3.excalidraw.png]]
+
+Here we never added **bob** to the bloom filter, but it is still present in filter. This means we can be **100%** sure if something isn't available in filter, but not the other way around.
 
 We can control the probability of getting false positives by controlling the size of bloom filter. More bits means fewer false positives. We can also increase the number of hash functions to check more bits and reduce false positives. This also increases latency to add and check elements in bloom filter.
 
 Let **n** be the size of bit array, **k** be the number of hash functions and **n** be the number of elements to be inserted in the filter, then probability of false positives **p** can be calculated as follows:
+
 $\mathrm{P} = \left( 1-\left[ 1-\frac{1}{n} \right]^{km} \right)^{k}$
 
 If **m** is max number elements expected to be handled by bloom filter and desired false positive probability is **p**, the the size of bit array **n** can be calcuated as follows:
+
 $\mathrm{n} = -\frac{mln{P}}{(ln{2})^{2}}$
 
 If **n** is size of bit array and **m** is number of elements to be inserted then optimum number if hash functions **k** can be calculated as follows:
+
 $\mathrm{k} = \frac{n}{m}ln{2}$
 
 Bloom filter are very space efficient, as data items are not stored. Using bit array allows hash collision, without hash collision, it would not be compact.
