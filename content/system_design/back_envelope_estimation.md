@@ -40,13 +40,17 @@ Latency numbers as revealed by **Dr. Dean** from Google in 2010 may be outdated 
 |      Read 1 MB sequentially from disk       |  30,000,000 ns = 30 ms  |
 | Send packet CA(California)->Netherlands->CA | 150,000,000 ns = 150 ms |
 
-**ns = nanosecond
-μs = microsecond
-ms = millisecond**
+**ns = nanosecond**
 
-**1 ns = 10<sup>-9</sup> seconds
-1 μs = 10<sup>-6</sup> seconds = 1,000 ns
-1 ms = 10<sup>-3</sup> seconds = 1,000 μs = 1,000,000 ns**
+**μs = microsecond**
+
+**ms = millisecond**
+
+**1 ns = 10<sup>-9</sup> seconds**
+
+**1 μs = 10<sup>-6</sup> seconds = 1,000 ns**
+
+**1 ms = 10<sup>-3</sup> seconds = 1,000 μs = 1,000,000 ns**
 
 Some conclusions from above numbers-
 - Memory is fast but disk is slow
