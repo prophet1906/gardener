@@ -6,7 +6,7 @@ tags:
 
 Creating design for a system isn't helpful unless you can justify why your design is better than others. After creating a design, there will be questions on weather the design fulfills the specified requirements. 
 
-According to **Jeff Dean**, Google Senior Fellow, **"**back-of-the-envelope calculations are estimates you create using a combination of thought experiments and common performance numbers to get a good feel for which design will meet your requirements.**"**
+According to **Jeff Dean**, Google Senior Fellow, **"back-of-the-envelope calculations are estimates you create using a combination of thought experiments and common performance numbers to get a good feel for which design will meet your requirements."**
 
 A good sense of scalability basics are required to do back-of-the-envelope estimation.
 
