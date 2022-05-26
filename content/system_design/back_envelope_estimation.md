@@ -6,12 +6,12 @@ tags:
 
 Creating design for a system isn't helpful unless you can justify why your design is better than others. After creating a design, there will be questions on weather the design fulfills the specified requirements. 
 
-According to **Jeff Dean**, Google Senior Fellow, "back-of-the-envelope calculations are estimates you create using a combination of thought experiments and common performance numbers to get a good feel for which design will meet your requirements".
+According to **Jeff Dean**, Google Senior Fellow, **"**back-of-the-envelope calculations are estimates you create using a combination of thought experiments and common performance numbers to get a good feel for which design will meet your requirements.**"**
 
 A good sense of scalability basics are required to do back-of-the-envelope estimation.
 
 ## Power of two
-An ASCII character uses one byte of memory (8 bits). Given below is data volume unit using power of 2.
+An **ASCII** character uses one byte of memory (8 bits). Given below is data volume unit using power of 2.
 
 | Power | Approximate Value | Full name  | Short name |
 |:-----:|:-----------------:|:----------:|:----------:|
@@ -22,7 +22,7 @@ An ASCII character uses one byte of memory (8 bits). Given below is data volume 
 |  50   |   1 Quadrillion   | 1 Petabyte |    1 PB    |
 
 ## Latency numbers
-Latency numbers as revealed by Dr. Dean from Google in 2010 may be outdated because of faster and more powerful computers. But, these numbers should still help you to get general idea of fastness and slowness of different computer operations.
+Latency numbers as revealed by **Dr. Dean** from Google in 2010 may be outdated because of faster and more powerful computers. But, these numbers should still help you to get general idea of fastness and slowness of different computer operations.
 
 |               Operation name                |            Time            |
 |:-------------------------------------------:|:--------------------------:|
@@ -31,22 +31,22 @@ Latency numbers as revealed by Dr. Dean from Google in 2010 may be outdated beca
 |             L2 cache reference              |            7 ns            |
 |              Mutex lock/unlock              |           100 ns           |
 |            Main memory reference            |           100 ns           |
-|        Compress 1K bytes with Zippy         |  10,000 ns = 10 $\micro$s  |
-|      Send 2K bytes over 1 Gbps network      |  20,000 ns = 20 $\micro$s  |
-|     Read 1 MB sequentially from memory      | 250,000 ns = 250 $\micro$s |
-|    Round trip within the same datacenter    | 500,000 ns = 500 $\micro$s |
+|        Compress 1K bytes with Zippy         |  10,000 ns = 10 μs  |
+|      Send 2K bytes over 1 Gbps network      |  20,000 ns = 20 μs  |
+|     Read 1 MB sequentially from memory      | 250,000 ns = 250 μs |
+|    Round trip within the same datacenter    | 500,000 ns = 500 μs |
 |                  Disk seek                  |   10,000,000 ns = 10 ms    |
 |   Read 1 MB sequentially from the network   |   10,000,000 ns = 10 ms    |
 |      Read 1 MB sequentially from disk       |   30,000,000 ns = 30 ms    |
 | Send packet CA(California)->Netherlands->CA |  150,000,000 ns = 150 ms   |
 
 **ns = nanosecond
-$\micro$s = microsecond
+μs = microsecond
 ms = millisecond**
 
 **1 ns = 10<sup>-9</sup> seconds
-1 $\micro$s = 10<sup>-6</sup> seconds = 1,000 ns
-1 ms = 10<sup>-3</sup> seconds = 1,000 $\micro$s = 1,000,000 ns**
+1 μs = 10<sup>-6</sup> seconds = 1,000 ns
+1 ms = 10<sup>-3</sup> seconds = 1,000 μs = 1,000,000 ns**
 
 Some conclusions from above numbers-
 - Memory is fast but disk is slow
