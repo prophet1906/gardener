@@ -11,8 +11,8 @@ tags:
 Every engineer with computer science major stumbles on the question atleast once, weather to use **1000 bytes** or **1024 bytes** as **1 kilobyte** equivalent.
 
 The value of **1 kilobyte** depends on the context as follows -
-- **Disk Storage** always refers to base 2 numbers, where **k = 1024** or 2<sup>10</sup>.
-- **Transmission Speeds** always refers to SI units or base 10 numbers, where **k = 1000** or 10<sup>3</sup>
+- **Disk Storage** always refers to base 2 numbers, where **k = 1024** or $2^{10}$.
+- **Transmission Speeds** always refers to SI units or base 10 numbers, where **k = 1000** or $10^{3}$.
 
 **Note: 1 byte = 8 bits**
 

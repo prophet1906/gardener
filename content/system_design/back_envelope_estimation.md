@@ -46,11 +46,11 @@ Latency numbers as revealed by **Dr. Dean** from Google in 2010 may be outdated 
 
 **ms = millisecond**
 
-**1 ns =** 10<sup>-9</sup> **seconds**
+**1 ns =** $10^{-9}$ **seconds**
 
-**1 μs =** 10<sup>-6</sup> **seconds = 1,000 ns**
+**1 μs =** $10^{-6}$ **seconds = 1,000 ns**
 
-**1 ms =** 10<sup>-3</sup> **seconds = 1,000 μs = 1,000,000 ns**
+**1 ms =** $10^{-3}$ **seconds = 1,000 μs = 1,000,000 ns**
 
 Some conclusions from above numbers-
 - Memory is fast but disk is slow
@@ -90,9 +90,9 @@ Following numbers are just to showcase how back-of-the-envelope-estimation works
 
 We will only estimate media storage here.
 - Average tweet size:
-	- tweet_id -> 64 bytes
-	- text -> 140 bytes
-	- media -> 1 MB
+	- tweet_id $\to$ 64 bytes
+	- text $\to$ 140 bytes
+	- media $\to$ 1 MB
 - Media storage: 150 million \* 2 \* 10% \* 1 MB = 30 TB per day
 - 5-year media storage: 3 TB \* 365 \* 5 = ~55 PB
 
