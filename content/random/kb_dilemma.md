@@ -8,7 +8,7 @@ tags:
 - bytes
 ---
 
-Every engineer with computer science major stumbles on the question atleast once, weather to use **1000 bytes** or **1024 bytes** as **1 kilobyte** equivalent.
+Every engineer with computer science major stumbles on this question atleast once, weather to use **1000 bytes** or **1024 bytes** as **1 kilobyte** equivalent.
 
 The value of **1 kilobyte** depends on the context as follows -
 - **Disk Storage** always refers to base 2 numbers, where **k = 1024** or $2^{10}$.
