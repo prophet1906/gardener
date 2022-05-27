@@ -1,5 +1,5 @@
 ---
-title: "Back of the Envelope Estimation"
+title: "System Design: Back of the Envelope Estimation"
 tags:
 - system-design
 ---
@@ -46,11 +46,11 @@ Latency numbers as revealed by **Dr. Dean** from Google in 2010 may be outdated 
 
 **ms = millisecond**
 
-**1 ns = 10<sup>-9</sup> seconds**
+**1 ns =** 10<sup>-9</sup> **seconds**
 
-**1 μs = 10<sup>-6</sup> seconds = 1,000 ns**
+**1 μs =** 10<sup>-6</sup> **seconds = 1,000 ns**
 
-**1 ms = 10<sup>-3</sup> seconds = 1,000 μs = 1,000,000 ns**
+**1 ms =** 10<sup>-3</sup> **seconds = 1,000 μs = 1,000,000 ns**
 
 Some conclusions from above numbers-
 - Memory is fast but disk is slow
