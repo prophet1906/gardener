@@ -33,10 +33,13 @@ When we talk about transmission speeds, kilobits means 1000 bits.
 
 ## Questions
 **Q1:** Calculate how many bytes there are in three kilobytes of disc storage?
+
 **Answer:** The question clearly defines the context as disc storage. Therefore, kilobyte should be considered 1024 bytes. Correct response should be 3 \* 1024.
 
 **Q2:** Calculate how many bits are being transmitted per second for a network described as three Mbps.
+
 **Answer:** The question clearly defines the context as network transmission. Therefore, meaning of 3 Mbps(megabits per second) should be clear. It is 1,000,000 bits per second. Correct response should be 3 \* 1,000,000.
 
 **Q3:** How long would it take to transmit a 2 KB(kilobyte) file at 3 Mbps(megabits per second)?
+
 **Answer:** The question would involve both of the values 1000 and 1024. Correct response is $\frac{2 * 1024 * 8}{3 * 1000 * 1000}$.
